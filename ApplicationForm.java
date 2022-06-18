@@ -73,7 +73,9 @@ public class ApplicationForm extends JFrame {
         inputField.setMargin(new Insets(8, 0, 8, 0));
         inputField.setBackground(new Color(255, 255, 255));
 
-        inputField.setText("0");
+        inputField.setText("");
+
+
 
 
         return top;
@@ -115,8 +117,11 @@ public class ApplicationForm extends JFrame {
     }
 
     private JPanel createOperatorsPanel(ActionListener buttonListener) {
+
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 1));
+
+
+        panel.setLayout(new GridLayout(6, 1));
 
         JButton minus = new OperatorJButton("-");
         minus.addActionListener(buttonListener);
@@ -126,7 +131,7 @@ public class ApplicationForm extends JFrame {
         plus.addActionListener(buttonListener);
         panel.add(plus);
 
-        JButton multiply = new OperatorJButton("x");
+        JButton multiply = new OperatorJButton("*");
         multiply.addActionListener(buttonListener);
         panel.add(multiply);
 
@@ -134,7 +139,13 @@ public class ApplicationForm extends JFrame {
         divide.addActionListener(buttonListener);
         panel.add(divide);
 
+        JButton scobka1 = new OperatorJButton("(");
+        scobka1.addActionListener(buttonListener);
+        panel.add(scobka1);
 
+        JButton scobka2 = new OperatorJButton(")");
+        scobka2.addActionListener(buttonListener);
+        panel.add(scobka2);
         return panel;
     }
 

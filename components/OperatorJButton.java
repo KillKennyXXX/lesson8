@@ -7,7 +7,7 @@ public class OperatorJButton extends JButton {
 
     public OperatorJButton(String text) {
         super(text);
-        setFont(new Font("Gothic", Font.ITALIC, 30));
+        setFont(new Font("Gothic", Font.ITALIC, 20));
         setBackground(new Color(159, 180, 180));
     }
 }
